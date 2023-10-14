@@ -1,5 +1,5 @@
-<a href="?pagina=inserir_aluno">Inserir novo Aluno</a>
-<table class="table">
+<a href="?pagina=inserir_aluno" class="btn btn-success mt-3">Inserir novo Aluno</a>
+<table class="table" id="alunos">
   <thead>
     <tr>
       <th scope="col">Nome</th>
@@ -8,6 +8,8 @@
       <th scope="col">Editar</th>
       <th scope="col">Deletar</th>
     </tr>
+  </thead>
+  <tbody>
     <?php 
         while($linha = mysqli_fetch_array($consulta_alunos)){
             echo'<tr><td>'.$linha['NOME'].'</td>';
@@ -19,5 +21,5 @@
     <?php
         }
     ?>
-  </thead>
+</tbody>
 </table>
