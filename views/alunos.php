@@ -5,6 +5,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Data de Nascimento</th>
+      <th scope="col">Editar</th>
       <th scope="col">Deletar</th>
     </tr>
     <?php 
@@ -13,6 +14,7 @@
             echo'<td>'.$linha['EMAIL'].'</td>';
             echo'<td>'.$linha['DATA_NASCIMENTO'].'</td>';
     ?>
+     <td><a href="?pagina=inserir_aluno&editar=<?php echo $linha['ID']; ?>">Editar</a></td>
       <td><a href="deleta_aluno.php?id_aluno=<?php echo $linha['ID']; ?>">Deletar</a></td>
     <?php
         }
