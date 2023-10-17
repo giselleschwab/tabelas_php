@@ -12,6 +12,10 @@
         <label for="duracao">Duracao</label>
         <input type="text" class="form-control" name="duracao" placeholder="Duração do curso">
     </div>
+    <div class="form-group mb-3">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="text" class="form-control" name="data_nascimento" placeholder="Insira a data de nascimento">
+    </div>
     <button type="submit" class="btn btn-danger">Submit</button>
     </form>
 </div>
