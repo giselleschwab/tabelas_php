@@ -50,6 +50,29 @@ $(document).ready(function(){
   setupDataTableWithDateFilter('#alunos', 2); 
 });
 </script>
-  
+
+<script>
+  document.getElementById('tabelaSelect').addEventListener('change', function() {
+    var selectedValue = this.value;
+
+    // Mostra todas as linhas
+    var rows = document.querySelectorAll('#tabelaCorpo tr');
+    rows.forEach(function(row) {
+      row.style.display = '';
+    });
+
+    // Esconde linhas baseado na seleção
+    if (selectedValue !== 'todos') {
+      var selectedClass = selectedValue === 'cursos' ? 'alunos' : 'cursos';
+      selectedClass = selectedValue === 'outra_tabela1' ? 'outra_tabela2' : selectedClass;
+      selectedClass = selectedValue === 'outra_tabela2' ? 'outra_tabela2' : selectedClass;
+
+      var rowsToHide = document.querySelectorAll('#tabelaCorpo tr:not(.' + selectedClass + ')');
+      rowsToHide.forEach(function(row) {
+        row.style.display = 'none';
+      });
+    }
+  });
+</script>
   </body>
 </html>

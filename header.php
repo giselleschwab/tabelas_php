@@ -29,6 +29,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="?pagina=matriculas">Matrículas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="?pagina=agenda">Agenda</a>
+                    </li>
                 </ul>
             </div>
             </nav>
