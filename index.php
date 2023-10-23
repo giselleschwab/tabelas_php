@@ -19,6 +19,7 @@ switch($pagina){
     case 'alunos':  include 'views/alunos.php'; break;
     case 'inserir_cursos': include 'views/inserir_curso.php'; break;
     case 'inserir_aluno':  include 'views/inserir_aluno.php'; break;
+    case 'agenda':  include 'views/agenda.php'; break;
     default: include 'views/home.php'; break;
 }
 
