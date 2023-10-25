@@ -10,9 +10,12 @@
     $consulta = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($consulta) == 1){
+        session_start();
+        $_SESSION['login'] = true;
+        $_SESSION['usuario'] = $usuario;
         header('location:index.php');
     }
     else{
-        header('location:index.php?erro=1');
+        header('location:index.php?erro');
     }
 ?>  
