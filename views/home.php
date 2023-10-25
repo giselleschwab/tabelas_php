@@ -9,5 +9,10 @@
         <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <?php if(isset($_GET['erro'])){ ?>
+        <div class="alert alert-danger" role="alert">
+        Usuário e/ou senha inválido!
+        </div>
+    <?php } ?>
     </form>
 </div>

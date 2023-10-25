@@ -1,4 +1,6 @@
 <?php
+#Iniciar sessão
+session_start();
 #base de dados
 include 'db.php';
 
@@ -7,12 +9,17 @@ include 'header.php';
 
 #conteúdo da página;
 //se a pagina existir vai pra pagina se não vai pra home
-if(isset($_GET['pagina'])){
-   $pagina = $_GET['pagina']; 
-}
-else{
+//se o login existir faz uma validação de página
+if(isset($_SESSION['login'])){
+    if(isset($_GET['pagina'])){
+    $pagina = $_GET['pagina']; 
+    } else{
+        $pagina = 'cursos';
+    }
+} else{
     $pagina = 'home';
 }
+
 
 switch($pagina){
     case 'cursos':  include 'views/cursos.php'; break;

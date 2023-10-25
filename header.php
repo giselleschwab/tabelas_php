@@ -32,6 +32,13 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="?pagina=agenda">Agenda</a>
                     </li>
+                    <?php if(isset($_SESSION['login'])){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="logout.php"> 
+                            <?php echo "sair" ?>
+                        </a>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
             </nav>
