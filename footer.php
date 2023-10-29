@@ -74,5 +74,11 @@ $(document).ready(function(){
     }
   });
 </script>
+
+<script>
+    function imprimirTabela() {
+        window.print();
+    }
+</script>
   </body>
 </html>

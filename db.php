@@ -18,9 +18,9 @@ $query = "SELECT NOME, DATA_NASCIMENTO as data_nascimento
 
 $agenda_alunos = mysqli_query($conn, $query);
 
-$query = "SELECT NOME, data_nascimento
+$query = "SELECT NOME, data_inicio
             FROM curso
-            WHERE data_nascimento = CURDATE()";
+            WHERE data_inicio = CURDATE()";
 
 $agenda_curso = mysqli_query($conn, $query);
 ?>
