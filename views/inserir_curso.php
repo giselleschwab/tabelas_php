@@ -13,9 +13,34 @@
         <input type="text" class="form-control" name="duracao" placeholder="Duração do curso">
     </div>
     <div class="form-group mb-3">
-        <label for="nascimento">Data de nascimento</label>
-        <input type="text" class="form-control" name="data_nascimento" placeholder="Insira a data de nascimento">
+        <label for="data_inicio">Data de início</label>
+        <input type="text" class="form-control" name="data_inicio" placeholder="Insira a data de nascimento">
     </div>
+    <div class="form-group mb-3">
+        <label for="professor">Professor</label>
+        <input type="text" class="form-control" name="professor" placeholder="Professor">
+    </div>
+    <div class="form-group mb-3">
+        <label for="numero_vagas">Nº de vagas</label>
+        <input type="text" class="form-control" name="numero_vagas" placeholder="Número de vagas">
+    </div>
+    <div class="form-group mb-3">
+        <label for="area">Área</label>
+        <input type="text" class="form-control" name="area" placeholder="Área">
+    </div>
+    <div class="form-group mb-3">
+        <label for="valor">Valor</label>
+        <input type="text" class="form-control" name="valor" placeholder="Valor">
+    </div>
+    <label for="desconto">Escolha a área do curso</label>
+        <select id="desconto">
+            <option value="Python">Python</option>
+            <option value="Javascriot">Javascript</option>
+            <option value="PHP">PHP</option>
+            <input type="text" id="nome_area" placeholder="Digite o nome">
+        </select>
+
+       
     <button type="submit" class="btn btn-danger">Submit</button>
     </form>
 </div>
