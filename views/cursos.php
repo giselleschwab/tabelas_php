@@ -11,6 +11,7 @@
         </tr>
     </tbody></table>
     <button onclick="imprimirTabela()">Imprimir Tabela</button>
+    <a href="gerar_excel.php">Gerar excel</a>
     <div class="table-responsive">
       <table class="table table-hover table-striped" id="cursos">
         <thead>
@@ -32,7 +33,7 @@
               while($linha = mysqli_fetch_array($consulta_cursos)){
                   echo'<tr><td>'.$linha['NOME'].'</td>';
                   echo'<td>'.$linha['DURACAO'].'</td>';
-                  echo'<td>'.$linha['data_inicio'].'</td>';
+                  echo '<td>'.date('Y-m-d', strtotime($linha['data_inicio'])).'</td>';
                   echo'<td>'.$linha['professor'].'</td>';
                   echo'<td>'.$linha['numero_vagas'].'</td>';
                   echo'<td>'.$linha['area'].'</td>';
